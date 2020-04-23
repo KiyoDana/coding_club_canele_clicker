@@ -17,12 +17,20 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Caneles_stemilion.jpg/1024px-Caneles_stemilion.jpg" />
         </div>
         <br />
-        <p1>Vous avez 0 canelés.</p1>
+        <p>Vous avez <b id="click">0</b> canelés.</p>
         <br />
         <br />
-        <button type="button">Cuisiner</button>
+        <button type="button" onClick="onClick()">Cuisiner</button>
         <button type="button" disabled>Achetez un four (25 canelés)</button>
     </div>
 </body>
+
+<script>
+	var clickNumber = 0;
+	function onClick() {
+		clickNumber = clickNumber + 1;
+		document.getElementById("click").innerHTML = clickNumber
+	}
+</script>
 </html>
 
